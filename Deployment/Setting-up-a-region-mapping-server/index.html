@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Setting up a Region Mapping Server - TerriaJS</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Setting up a Region Mapping Server";
+    var mkdocs_page_input_path = "Deployment\\Setting-up-a-region-mapping-server.md";
+    var mkdocs_page_url = "/Deployment/Setting-up-a-region-mapping-server/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> TerriaJS</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../GettingStarted/">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Catalog Management</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/CKAN/">CKAN</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/GeoJSON/">GeoJSON</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Web-Map-Service/">Web Map Service (WMS)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Performance-testing/">Performance Testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Handling-CORS/">Issues with CORS</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Initialization-File/">Initialization File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Format-Conversion-Service/">Format Conversion Service</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/Config-JSON/">Config JSON</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/How-to-skin-a-Terria-Map/">Skinning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/TerriaJS-URL-parameters/">URL Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/TerriaJS-in-iframe/">Controlling in an iframe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/Extending-TerriaJS/">Extending TerriaJS</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/CKAN-previewer/">CKAN Previewer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/WPS-parameters-guide/">WPS Parameters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Deployment</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Terria-Map/">Deploying TerriaMap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-and-building-TerriaJS/">Deploying and Building</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Overall-system-architecture/">Overall System Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Problems-and-Solutions/">Problems and Solutions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Setting up a Region Mapping Server</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#prepare-the-shapefiles">Prepare the shapefiles</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#set-up-geoserver">Set up GeoServer</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#configure-the-regions-in-your-terriajs-based-map">Configure the regions in your TerriaJS-based map</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-a-vector-tile-source-for-region-mapping/">Using a Vector Tile Source</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WMS-Services/">WMS Services</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Contributors</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Development-environment/">Development Environment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Contributing-to-TerriaJS/">Working with TerriaJS and Cesium</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Setting-up-Saucelabs-Locally/">Setting up Saucelabs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Using-Docker/">Using Docker</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">TerriaJS</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Deployment &raquo;</li>
+        
+      
+    
+    <li>Setting up a Region Mapping Server</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><em>Region mapping</em> is the process of matching a value in a CSV file to a pre-defined boundary, such as a postcode, local government area or electorate. The allowed boundaries for a given TerriaJS instance are given in a file such as <code>wwwroot/data/regionMapping.json</code>.</p>
+<p>This is the current method to create a new set of boundaries not currently supported by TerriaJS:</p>
+<h2 id="prepare-the-shapefiles">Prepare the shapefiles</h2>
+<ul>
+<li>One shapefile should contain all the polygons. </li>
+<li>
+<p>There should be a <code>FID</code> (case-sensitive) attribute, numbering each polygon starting from 0. If no FID attribute is present, use ogr2ogr to add it: </p>
+<p><code>ogr2ogr -f "ESRI Shapefile" precincts-fid.shp precincts.shp -sql 'select FID,* from precincts'</code> </p>
+<p>If you have several files to process, use a line like this:</p>
+<p><code>for i in GCCSA IARE ILOC IREG SOS SOSR SUA UCL; do ogr2ogr -f "ESRI Shapefile" ${i}_2011_AUST_fid.shp ${i}_2011_AUST.shp -sql 'select FID,* from '"${i}_2011_AUST"; done</code></p>
+</li>
+<li>
+<p>There should be an attribute containing the identifiers you wish to match against (eg, for postcode boundaries, a <code>postcode</code> attribute containing the 4 digit codes themselves).</p>
+</li>
+<li>The projection should be EPSG:4326 (unprojected lat/long on WGS84).</li>
+</ul>
+<h2 id="set-up-geoserver">Set up GeoServer</h2>
+<ol>
+<li>
+<p>Install GeoServer. The instance used by National Map is on AWS, available at geoserver.nationalmap.nicta.com.au.</p>
+</li>
+<li>
+<p>Using the GeoServer web interface, create a data store of type <code>Directory of spatial files (shapefiles)</code>.</p>
+</li>
+<li>
+<p>Upload the shapefile (.shp, .shx, .dbf and .qix) into the appropriate directory. For National Map's server, this is <code>/mnt/data/region_map/shape_files/</code>.</p>
+</li>
+<li>
+<p>Create a style called <code>region_fid</code>. Paste the contents of <a href="https://gist.github.com/stevage/767779515f037e1d1427">this Gist</a>.</p>
+</li>
+<li>
+<p>Under <em>Layers &gt; Add a New Resource</em>, find the new shapefile name and click <em>Publish</em> </p>
+</li>
+<li>
+<p>Set these properties:</p>
+</li>
+<li>Declared SRS: EPSG:4326</li>
+<li>Click "Compute from data" and "Compute from native bounds" to set the bounding box.</li>
+<li>On the <em>Publishing</em> page, set <code>region_fid</code> as the <em>Default Style</em></li>
+</ol>
+<h2 id="configure-the-regions-in-your-terriajs-based-map">Configure the regions in your TerriaJS-based map</h2>
+<p>Modify <code>wwwroot/data/regionMapping.json</code>. Add a section like this:</p>
+<pre><code>    "SA4": {
+        "layerName":"region_map:FID_SA4_2011_AUST",
+        "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
+        "regionProp": "SA4_CODE11",
+        "aliases": ["sa4_code", "sa4_code", "sa4"],
+        "description": "Statistical Area Level 4"
+    },
+</code></pre>
+<ul>
+<li><code>"SA4"</code>: this identifier does not serve any machine-readable purpose outside this file.</li>
+<li><code>layerName</code>: the WMS layer of your new regions, including the workspace.</li>
+<li><code>server</code>: the URL of your GeoServer, up to and including <code>/ows</code>.</li>
+<li><code>regionProp</code>: the name of the attribute containing region identifiers that will be matched against (case-sensitive)</li>
+<li><code>aliases</code>: alias of CSV column header names that will be recognised as matching this kind of feature. Must be lowercase.</li>
+<li><code>description</code>: May be used in GUI elements and error messages.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Using-a-vector-tile-source-for-region-mapping/" class="btn btn-neutral float-right" title="Using a Vector Tile Source">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Problems-and-Solutions/" class="btn btn-neutral" title="Problems and Solutions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Problems-and-Solutions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Using-a-vector-tile-source-for-region-mapping/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

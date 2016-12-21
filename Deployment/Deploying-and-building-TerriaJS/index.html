@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Deploying and Building - TerriaJS</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Deploying and Building";
+    var mkdocs_page_input_path = "Deployment\\Deploying-and-building-TerriaJS.md";
+    var mkdocs_page_url = "/Deployment/Deploying-and-building-TerriaJS/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> TerriaJS</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../GettingStarted/">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Catalog Management</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/CKAN/">CKAN</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/GeoJSON/">GeoJSON</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Web-Map-Service/">Web Map Service (WMS)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Performance-testing/">Performance Testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Handling-CORS/">Issues with CORS</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Initialization-File/">Initialization File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Format-Conversion-Service/">Format Conversion Service</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/Config-JSON/">Config JSON</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/How-to-skin-a-Terria-Map/">Skinning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/TerriaJS-URL-parameters/">URL Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/TerriaJS-in-iframe/">Controlling in an iframe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/Extending-TerriaJS/">Extending TerriaJS</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/CKAN-previewer/">CKAN Previewer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/WPS-parameters-guide/">WPS Parameters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Deployment</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Terria-Map/">Deploying TerriaMap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Deploying and Building</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#deploying-and-building-terriajs">Deploying and building TerriaJS</a></li>
+                
+                    <li><a class="toctree-l4" href="#deploying-terriajs">Deploying TerriaJS</a></li>
+                
+                    <li><a class="toctree-l4" href="#use-your-local-modifications-in-your-local-terriajs-based-map-npm-link">Use your local modifications in your local TerriaJS-based map (npm link)</a></li>
+                
+                    <li><a class="toctree-l4" href="#updating-build">Updating Build</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Overall-system-architecture/">Overall System Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Problems-and-Solutions/">Problems and Solutions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-region-mapping-server/">Setting up a Region Mapping Server</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-a-vector-tile-source-for-region-mapping/">Using a Vector Tile Source</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WMS-Services/">WMS Services</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Contributors</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Development-environment/">Development Environment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Contributing-to-TerriaJS/">Working with TerriaJS and Cesium</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Setting-up-Saucelabs-Locally/">Setting up Saucelabs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Using-Docker/">Using Docker</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">TerriaJS</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Deployment &raquo;</li>
+        
+      
+    
+    <li>Deploying and Building</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="deploying-and-building-terriajs">Deploying and building TerriaJS</h1>
+<p>If you run into problems, don't forget to check <a href="../Problems-and-Solutions/">Problems and Solutions</a>.</p>
+<p>This page explains how to deploy TerriaJS, which is the JavaScript library that powers sites like NationalMap. There are three reasons to do this:</p>
+<ol>
+<li>You are doing development on TerriaJS itself.</li>
+<li>You are working on a TerriaJS-based map, but have reached the limits of simple skinning and configuration, and now you need to make some code changes.</li>
+<li>You are an expert and are building a TerriaJS-based map from scratch.</li>
+</ol>
+<p><strong>If you just want to get your own TerriaJS-based map running on your own machine, stop now</strong>. </p>
+<p>Go and <a href="https://github.com/NICTA/nationalmap/wiki/Deploying-a-copy-of-National-Map">deploy a copy of National Map</a> instead. That gives you all the scaffolding you need to run a TerriaJS-based map quickly and easily.</p>
+<h2 id="deploying-terriajs">Deploying TerriaJS</h2>
+<p>Instructions are given for Ubuntu. Steps will be slightly different on other platforms.</p>
+<h3 id="install-dependencies">Install dependencies</h3>
+<h4 id="install-git">Install Git</h4>
+<p><code>sudo apt-get install -y git-core</code></p>
+<h4 id="install-nodejs">Install NodeJS</h4>
+<ul>
+<li>On Ubuntu: <code>sudo apt-get install -y nodejs-legacy npm</code></li>
+<li>On Windows, download and install the MSI from the npm web site.  </li>
+<li>On Mac OS X, install it via Homebrew.</li>
+</ul>
+<h4 id="install-gulp">Install Gulp</h4>
+<p>Gulp is the tool that builds TerriaJS. Install it system-wide, as administrator (Windows 8+) or sudu (Ubuntu / Mac OS X). See also: <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">Install npm packages globally without sudo on OS X and Linux</a>.</p>
+<pre><code>sudo npm install -g gulp
+npm install
+</code></pre>
+
+<h3 id="build-terriajs">Build TerriaJS</h3>
+<h4 id="get-the-terriajs-code-from-github">Get the TerriaJS code from GitHub</h4>
+<pre><code>git clone https://github.com/TerriaJS/terriajs.git
+cd terriajs
+</code></pre>
+
+<h4 id="install-terriajss-dependencies-using-npm">Install TerriaJS's dependencies using npm:</h4>
+<pre><code>npm install
+</code></pre>
+
+<h4 id="build-terriajs-itself">Build TerriaJS itself</h4>
+<pre><code>gulp
+</code></pre>
+
+<p>To start the TerriaJS node.js server, run:</p>
+<pre><code>npm start &amp;
+</code></pre>
+
+<p>You can access your TerriaJS instance at [[http://localhost:3002]] in a web browser.</p>
+<p>The TerriaJS tests are at [[http://localhost:3002/SpecRunner.html]].</p>
+<p>To continuously rebuild when you make changes to the code:</p>
+<p><code>gulp watch</code></p>
+<h2 id="use-your-local-modifications-in-your-local-terriajs-based-map-npm-link">Use your local modifications in your local TerriaJS-based map (<code>npm link</code>)</h2>
+<p>Presumably you want to see the changes you make in a local copy of a TerriaJS-based map such as National Map.</p>
+<ol>
+<li>After completing the build process, run <code>npm link</code> in the TerriaJS directory (presumably called <code>terriajs</code>). This sets up a symlink in your global NPM directory. <a href="http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears">More details</a> (including how to avoid needing sudo).</li>
+<li>In your map directory (eg, <code>nationalmap</code>), run <code>npm link terriajs</code>. This replaces the generic <code>node_modules/terriajs</code> with a symlink to that symlink.</li>
+</ol>
+<p>Summary:</p>
+<pre><code>cd terriajs
+npm link
+cd ../nationalmap
+npm link terriajs
+</code></pre>
+
+<p>Ensure that the version of TerriaJS is compatible with your TerriaJS-based map (look in <code>package.json</code>).</p>
+<h2 id="updating-build">Updating Build</h2>
+<p>The following commands are what you would normally run to pull changes from GitHub and build them:</p>
+<pre><code>git pull --rebase
+npm install
+gulp
+npm start
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Overall-system-architecture/" class="btn btn-neutral float-right" title="Overall System Architecture">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Deploying-Terria-Map/" class="btn btn-neutral" title="Deploying TerriaMap"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Deploying-Terria-Map/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Overall-system-architecture/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

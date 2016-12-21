@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Initialization File - TerriaJS</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Initialization File";
+    var mkdocs_page_input_path = "CatalogManagement\\Initialization-File.md";
+    var mkdocs_page_url = "/CatalogManagement/Initialization-File/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> TerriaJS</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../GettingStarted/">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Catalog Management</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../CKAN/">CKAN</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../GeoJSON/">GeoJSON</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Web-Map-Service/">Web Map Service (WMS)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Performance-testing/">Performance Testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Handling-CORS/">Issues with CORS</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Initialization File</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#catalog-init-files">Catalog (init) files</a></li>
+                
+                    <li><a class="toctree-l4" href="#using-a-catalog-file">Using a catalog file</a></li>
+                
+                    <li><a class="toctree-l4" href="#editing-catalog-files">Editing catalog files</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#catalog-file-properties">Catalog file properties</a></li>
+                
+                    <li><a class="toctree-l4" href="#corsdomains">corsDomains</a></li>
+                
+                    <li><a class="toctree-l4" href="#homecamera-and-initialcamera">homeCamera and initialCamera</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Format-Conversion-Service/">Format Conversion Service</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/Config-JSON/">Config JSON</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/How-to-skin-a-Terria-Map/">Skinning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/TerriaJS-URL-parameters/">URL Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/TerriaJS-in-iframe/">Controlling in an iframe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/Extending-TerriaJS/">Extending TerriaJS</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/CKAN-previewer/">CKAN Previewer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/WPS-parameters-guide/">WPS Parameters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Deployment</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Deploying-Terria-Map/">Deploying TerriaMap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Deploying-and-building-TerriaJS/">Deploying and Building</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Overall-system-architecture/">Overall System Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Problems-and-Solutions/">Problems and Solutions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Setting-up-a-region-mapping-server/">Setting up a Region Mapping Server</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Using-a-vector-tile-source-for-region-mapping/">Using a Vector Tile Source</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/WMS-Services/">WMS Services</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Contributors</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Development-environment/">Development Environment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Contributing-to-TerriaJS/">Working with TerriaJS and Cesium</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Setting-up-Saucelabs-Locally/">Setting up Saucelabs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Using-Docker/">Using Docker</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">TerriaJS</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Catalog Management &raquo;</li>
+        
+      
+    
+    <li>Initialization File</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="catalog-init-files">Catalog (init) files</h2>
+<p>A catalog in Terria is defined in one or more catalog files (also known as "init files"). Each is a <a href="https://en.wikipedia.org/wiki/JSON">JSON file</a> with this basic structure:</p>
+<pre><code>{
+    &quot;catalog&quot;: [
+        {
+            &quot;type&quot;: &quot;group&quot;,
+            &quot;name&quot;: &quot;My group&quot;,
+            &quot;items&quot;: [
+            ...
+            ]
+        },
+        ...
+    ],
+    &quot;homeCamera&quot;: {
+        &quot;north&quot;: -8,
+        &quot;east&quot;: 158,
+        &quot;south&quot;: -45,
+        &quot;west&quot;: 109
+    },
+    &quot;initialCamera&quot;: { ... },
+    &quot;corsDomains&quot;: [ &quot;myserver.gov.au&quot; ]
+}
+</code></pre>
+
+<p>Key points:</p>
+<ul>
+<li><code>catalog</code> is an array</li>
+<li>Every element of that array must have a <code>type</code> (corresponding to a value recognised by TerriaJS) and a <code>name</code></li>
+<li>The three major categories of catalog member types are:<ul>
+<li><code>group</code>: a manually defined grouping of layers</li>
+<li>item types such as <code>geojson</code>, <code>wms</code>, <code>wfs</code> and <code>esri-mapServer</code>, which refer to one single layer</li>
+<li>group types such as <code>ckan</code>, <code>wms-getCapabilities</code> and <code>esri-mapServer-group</code></li>
+</ul>
+</li>
+</ul>
+<p>Most of the other properties of each layer depend on the specific type. We're working on generating documentation for each type. Meanwhile, you can look at the source code in Terria's <a href="../../Models">/Models</a> folder.</p>
+<h3 id="using-a-catalog-file">Using a catalog file</h3>
+<p>There are four ways to load a catalog file into Terria:</p>
+<ol>
+<li>Store it in Terria's <code>wwwroot/init</code> directory, and refer to it in the <code>initializationUrls</code> section of the <a href="../../Customizing/Config-JSON/"><code>config.json</code></a> file. It is loaded automatically when you visit the webpage.</li>
+<li>Store it in Terria's <code>wwwroot/init</code> directory, without adding it to config.json. Add the catalog file name (without <code>.json</code>) to the URL after <code>#</code>. For instance, <code>example.com/terria#mycatalog</code>. See <a href="../../Customizing/TerriaJS-URL-parameters/">TerriaJS URL parameters</a> for more information. This method is useful when developing catalog services which are not quite ready for public access, but for showing to interested stakeholders.</li>
+<li>Store it anywhere on the web (on a CORS-enabled server). Add the complete URL (including <code>.json</code>) to the URL, after <code>#</code>. For instance, <code>nationalmap.gov.au/#http://example.com/mycatalog.json</code>. This method is useful when developing services for a Terria instance which you don't directly control, and for rapidly previewing changes which you can also share with people.</li>
+<li>Store it locally, then drag and drop it into the Terria window.</li>
+</ol>
+<p>If using method 3, please note:</p>
+<ul>
+<li>Files on Github, including Gist files, are not served with CORS. However, you can access them through a third-party service, rawgit.com. For instance, https://github.com/TerriaJS/terriajs/blob/master/wwwroot/test/init/test-tablestyle.json can be accessed as https://rawgit.com/TerriaJS/terriajs/master/wwwroot/test/init/test-tablestyle.json.</li>
+</ul>
+<p>All catalog files, however loaded, are merged together in Terria. Any two items with the same name and place in the tree are combined. This means that if two catalog files each define a group called "Water", there will be only one "Water" group in Terria, containing the two sets of group members merged together.</p>
+<h3 id="editing-catalog-files">Editing catalog files</h3>
+<p>Catalog files can be edited three ways:</p>
+<ol>
+<li>Using a desktop text editor. Be very careful to ensure that your file is valid JSON. This is more restrictive format than simple JavaScript, for instance. You can use http://jsonlint.com/ .</li>
+<li>Using a JSON-specific editor, such as http://www.jsoneditoronline.org/. This has the advantage that your file will be valid JSON.</li>
+<li>Using the Terria Catalog Editor, currently available in a preview version at http://nationalmap.gov.au/editor/ . This editor is not yet considered reliable, and may cause data corruption.</li>
+</ol>
+<h2 id="catalog-file-properties">Catalog file properties</h2>
+<h3 id="corsdomains"><code>corsDomains</code></h3>
+<p>By default, Terria proxies all requests within TerriaJS-Server's whitelist, making the assumption that the servers do not support CORS. You can add hosts that are known to support CORS to this property to avoid proxying them.</p>
+<p><code>"corsDomains": [ "myserver.gov.au" ]</code></p>
+<h3 id="homecamera-and-initialcamera"><code>homeCamera</code> and <code>initialCamera</code></h3>
+<p>Maps have two camera positions, <code>homeCamera</code> and <code>initialCamera</code>. They are specified identically. All the examples here use <code>homeCamera</code>, but apply equally to both.</p>
+<ul>
+<li><code>initialCamera</code>: the location when the map first displays</li>
+<li><code>homeCamera</code>: where the camera goes when you click the "home" button between the zoom-in and zoom-out buttons.</li>
+</ul>
+<h4 id="option-1-north-south-east-west">Option 1: <code>north</code>, <code>south</code>, <code>east</code>, <code>west</code></h4>
+<p>The bounding box method uses <code>north</code>, <code>east</code>,<code>south</code>, and <code>west</code>, in lat/lng decimal degrees.  The camera will be positioned
+in the centre point of those bounds, looking toward the Earth's
+centre, zoomed back enough to see to the edges of the bounds.</p>
+<p>This is the only mode supported in 2D mode (Leaflet). Therefore, you should always include a bounding box, even if you also use another mode.</p>
+<pre><code>&quot;homeCamera&quot;: {
+    &quot;north&quot;: -8,
+    &quot;east&quot;: 158,
+    &quot;south&quot;: -45,
+    &quot;west&quot;: 109
+}
+</code></pre>
+
+<h4 id="option-2-position-direction-and-up">Option 2: <code>position</code>, <code>direction</code> and <code>up</code></h4>
+<p>This overrides Option 1.</p>
+<p>You can specify <code>position</code>, <code>direction</code>, and <code>up</code> (as well as
+<code>north</code>, <code>east</code>,<code>south</code>, and <code>west</code>). <code>position</code>, <code>direction</code> and <code>up</code>
+need <code>x</code>, <code>y</code> and <code>z</code> keys specifying locations in
+<a href="https://en.wikipedia.org/wiki/ECEF">ECEF</a> metre coordinates, which
+means the origin is the centre of the Earth, positive Z points to
+the north pole, positive X points toward
+<a href="https://en.wikipedia.org/wiki/Null_Island">"Null Island"</a> where the
+equator intersects with 0 degrees longitude, and positive Y points at
+(0, 90E) -- which is in the Indian Ocean south of the Bay of Bengal.</p>
+<ul>
+<li><code>position</code>: where the camera is</li>
+<li><code>direction</code>: where the camera is looking</li>
+<li><code>up</code>: which way is "up", which determines how the camera is rotated</li>
+</ul>
+<p>For most purposed positioning this way is difficult for normal
+humans. To see an example, move the camera to some location, click the "share" button (and choose to not use the
+URL shortner), then URL-decode the URL you get.</p>
+<pre><code>&quot;homeCamera&quot;: {
+    &quot;west&quot;: 105.51019777628066,
+    &quot;south&quot;: -39.61110094535454,
+    &quot;east&quot;: 161.48980219597954,
+    &quot;north&quot;: -9.09249015267353,
+    &quot;position&quot;: {
+        &quot;x&quot;: -6685409.955422118,
+        &quot;y&quot;: 7044952.140379313,
+        &quot;z&quot;: -4828130.30167422
+    },
+    &quot;direction&quot;: {
+        &quot;x&quot;: 0.6155666547559182,
+        &quot;y&quot;: -0.6486719065674744,
+        &quot;z&quot;: 0.4475516184561574
+    },
+    &quot;up&quot;: {
+        &quot;x&quot;: -0.30807420442344124,
+        &quot;y&quot;: 0.3246424737331665,
+        &quot;z&quot;: 0.8942580996654569
+    }
+}
+</code></pre>
+
+<h4 id="option-3-positionheading-like-an-aircraft">Option 3: <code>positionHeading</code> (like an aircraft)</h4>
+<p>Setting <code>positionHeading</code> is useful for when you're showing a view from an aircraft or
+satellite, and overrides Options 1 and 2.</p>
+<p>It has the following attributes:</p>
+<ul>
+<li><code>cameraLongitude</code>: longitude of camera</li>
+<li><code>cameraLatitude</code>: latitude of camera</li>
+<li><code>cameraHeight</code>: height of camera above earth's surface, probably in metres</li>
+<li><code>heading</code>: in degrees clockwise from north (90 is east)</li>
+<li><code>pitch</code>: how much the camera is tilted, in degrees down from horizontal (-90 is straight down)</li>
+<li><code>roll</code>: how much the camera is rotated left or right, in degrees</li>
+</ul>
+<pre><code>&quot;homeCamera&quot;: {
+    &quot;positionHeading&quot;: {
+        &quot;cameraLongitude&quot;: 145,
+        &quot;cameraLatitude&quot;: -37,
+        &quot;cameraHeight&quot;: 1000,
+        &quot;heading&quot;: 0,
+        &quot;pitch&quot;: -70,
+        &quot;roll&quot;: 0,
+    }
+}
+</code></pre>
+
+<h4 id="option-4-lookat-a-feature">Option 4: <code>lookAt</code> (a feature)</h4>
+<p><code>lookAt</code> is probably the most useful one for showing a feature on the
+map, and overrides Options 1, 2, and 3.</p>
+<p>It has these attributes:</p>
+<ul>
+<li><code>targetLongitude</code>:</li>
+<li><code>targetLatitude</code>:</li>
+<li><code>targetHeight</code>:, in metres from sealevel (positive is up)</li>
+<li><code>heading</code>: in degrees clockwise from north</li>
+<li><code>pitch</code>: in degrees down from horizontal (so negative values mean you're looking at the sky)</li>
+<li><code>range</code>: in metres from the thing you're looking at</li>
+</ul>
+<pre><code>&quot;homeCamera&quot;: {
+    &quot;lookAt&quot;: {
+        &quot;targetLongitude&quot;: 145,
+        &quot;targetLatitude&quot;: 37,
+        &quot;targetHeight&quot;: 0,
+        &quot;heading&quot;: 0,
+        &quot;pitch&quot;: -90,
+        &quot;range&quot;: 1000,
+    }
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Format-Conversion-Service/" class="btn btn-neutral float-right" title="Format Conversion Service">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Handling-CORS/" class="btn btn-neutral" title="Issues with CORS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Handling-CORS/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Format-Conversion-Service/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

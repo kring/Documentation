@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Controlling in an iframe - TerriaJS</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Controlling in an iframe";
+    var mkdocs_page_input_path = "Customizing\\TerriaJS-in-iframe.md";
+    var mkdocs_page_url = "/Customizing/TerriaJS-in-iframe/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> TerriaJS</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../GettingStarted/">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Catalog Management</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/CKAN/">CKAN</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/GeoJSON/">GeoJSON</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Web-Map-Service/">Web Map Service (WMS)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Performance-testing/">Performance Testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Handling-CORS/">Issues with CORS</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Initialization-File/">Initialization File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Format-Conversion-Service/">Format Conversion Service</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Config-JSON/">Config JSON</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-to-skin-a-Terria-Map/">Skinning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../TerriaJS-URL-parameters/">URL Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Controlling in an iframe</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#controlling-terriajs-through-an-iframe">Controlling TerriaJS through an &lt;iframe&gt;</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Extending-TerriaJS/">Extending TerriaJS</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../CKAN-previewer/">CKAN Previewer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WPS-parameters-guide/">WPS Parameters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Deployment</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Deploying-Terria-Map/">Deploying TerriaMap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Deploying-and-building-TerriaJS/">Deploying and Building</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Overall-system-architecture/">Overall System Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Problems-and-Solutions/">Problems and Solutions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Setting-up-a-region-mapping-server/">Setting up a Region Mapping Server</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Using-a-vector-tile-source-for-region-mapping/">Using a Vector Tile Source</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/WMS-Services/">WMS Services</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Contributors</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Development-environment/">Development Environment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Contributing-to-TerriaJS/">Working with TerriaJS and Cesium</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Setting-up-Saucelabs-Locally/">Setting up Saucelabs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Using-Docker/">Using Docker</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">TerriaJS</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Customizing &raquo;</li>
+        
+      
+    
+    <li>Controlling in an iframe</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="controlling-terriajs-through-an-iframe">Controlling TerriaJS through an <code>&lt;iframe&gt;</code></h2>
+<p>TerriaJS can be configured to accept messages posted to it by its parent window.  This is useful when embedding a TerriaJS app in an iframe and when the parent wants to send more data to the embedded app than can be reasonably included in a URL.</p>
+<p>Click <a href="http://terriajs.github.io/embedded-natmap/">here</a> to see a demo, which also sizes the iframe to fill the available space.</p>
+<p>First, the TerriaJS app must include a line like this:</p>
+<pre><code class="js">updateApplicationOnMessageFromParentWindow(terria, window);
+</code></pre>
+
+<p>Then, the parent window can send messages like this:</p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;NationalMap Embed Test&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;iframe id=&quot;embeddedNationalMap&quot; src=&quot;http://nationalmap.gov.au&quot; width=&quot;1024&quot; height=&quot;768&quot;&gt;&lt;/iframe&gt;
+
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        window.addEventListener('message', function(e) {
+            var iframeWindow = document.getElementById('embeddedNationalMap').contentWindow;
+            if (e.source === iframeWindow &amp;&amp; e.data === 'ready') {
+                // NationalMap is ready to receive messages!
+                iframeWindow.postMessage({
+                    initSources: [
+                        {
+                            initialCamera: {
+                                &quot;north&quot;: -33.827,
+                                &quot;east&quot;: 151.249,
+                                &quot;south&quot;: -33.907,
+                                &quot;west&quot;: 151.165
+                            },
+                            catalog: [
+                                {
+                                    type: &quot;group&quot;,
+                                    name: &quot;Foo&quot;,
+                                    isPromoted: true,
+                                    isOpen: true,
+                                    items: [
+                                        {
+                                            type: &quot;csv&quot;,
+                                            name: &quot;My Data&quot;,
+                                            data: &quot;POA,Some Value\n2000,1\n2205,2&quot;,
+                                            isEnabled: true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }, 'http://nationalmap.gov.au');
+            }
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Notice that parent is creating a CSV catalog item with embedded data.  The CSV is only two lines in this case, but in a real application it could be large, much larger than could fit in a URL.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Extending-TerriaJS/" class="btn btn-neutral float-right" title="Extending TerriaJS">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../TerriaJS-URL-parameters/" class="btn btn-neutral" title="URL Parameters"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../TerriaJS-URL-parameters/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Extending-TerriaJS/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

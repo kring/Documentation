@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Issues with CORS - TerriaJS</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Issues with CORS";
+    var mkdocs_page_input_path = "CatalogManagement\\Handling-CORS.md";
+    var mkdocs_page_url = "/CatalogManagement/Handling-CORS/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> TerriaJS</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../GettingStarted/">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Catalog Management</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../CKAN/">CKAN</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../GeoJSON/">GeoJSON</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Web-Map-Service/">Web Map Service (WMS)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Performance-testing/">Performance Testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Issues with CORS</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#handling-cross-origin-resource-sharing-cors-issues">Handling Cross-Origin-Resource-Sharing (CORS) issues</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Initialization-File/">Initialization File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Format-Conversion-Service/">Format Conversion Service</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/Config-JSON/">Config JSON</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/How-to-skin-a-Terria-Map/">Skinning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/TerriaJS-URL-parameters/">URL Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/TerriaJS-in-iframe/">Controlling in an iframe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/Extending-TerriaJS/">Extending TerriaJS</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/CKAN-previewer/">CKAN Previewer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Customizing/WPS-parameters-guide/">WPS Parameters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Deployment</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Deploying-Terria-Map/">Deploying TerriaMap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Deploying-and-building-TerriaJS/">Deploying and Building</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Overall-system-architecture/">Overall System Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Problems-and-Solutions/">Problems and Solutions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Setting-up-a-region-mapping-server/">Setting up a Region Mapping Server</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Using-a-vector-tile-source-for-region-mapping/">Using a Vector Tile Source</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/WMS-Services/">WMS Services</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Contributors</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Development-environment/">Development Environment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Contributing-to-TerriaJS/">Working with TerriaJS and Cesium</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Setting-up-Saucelabs-Locally/">Setting up Saucelabs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Using-Docker/">Using Docker</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">TerriaJS</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Catalog Management &raquo;</li>
+        
+      
+    
+    <li>Issues with CORS</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="handling-cross-origin-resource-sharing-cors-issues">Handling Cross-Origin-Resource-Sharing (CORS) issues</h2>
+<p>A common problem when you add a new data source to TerriaJS is this error:</p>
+<p><code>...the server does not support CORS. If this is your server, verify that CORS is enabled and enable it if it is not. If you do not control the server, please contact the administrator of the server and ask them to enable CORS. Or ... ask us to add this server to the list of non-CORS-supporting servers that may be proxied.</code></p>
+<p>To resolve this, you need to add all servers you intend to access to <code>devserverconfig.json</code>'s <code>allowProxyFor</code> list. This "whitelist" authorizes the proxy to work with those servers. <em>Even servers that support CORS should be in that list because IE9 doesn't support CORS, so it needs the proxy for all cross-origin requests.</em></p>
+<p>Then, you should add servers that <em>do</em> support CORS to the <code>wwwroot\init\xyz.json</code>'s <code>corsDomains</code> list. Servers in this list are contacted directly instead of going through the proxy... except:
+- in IE9
+- if an HTTPS web page is accessing an HTTP server (this way we avoid a mixed content warning from the browser).</p>
+<p>If your server does <em>not</em> support CORS, then you still need to add it to the <code>allowProxyFor</code> whitelist, but do not add it to the <code>corsDomains</code> list. It will then be proxied.</p>
+<p>Sometimes we deliberately exclude CORS-supporting servers from the <code>corsDomains</code> list; the proxy caches its data, so we leverage its caching to improve performance.</p>
+<p>In both lists, a server name <code>foo.org</code> can be interpreted as <code>*.foo.org</code>. The port must match exactly. It's not very smart, so if you specify port 80 that won't match a server without a port specified, and vice-versa.</p>
+<p>The downside to a permissive whitelist is that you'll proxy for more servers, and people could use your proxy to make their (malicious?) traffic look like it's coming from your server instead of from theirs.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Initialization-File/" class="btn btn-neutral float-right" title="Initialization File">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Performance-testing/" class="btn btn-neutral" title="Performance Testing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Performance-testing/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Initialization-File/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

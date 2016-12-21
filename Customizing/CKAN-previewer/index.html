@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>CKAN Previewer - TerriaJS</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "CKAN Previewer";
+    var mkdocs_page_input_path = "Customizing\\CKAN-previewer.md";
+    var mkdocs_page_url = "/Customizing/CKAN-previewer/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> TerriaJS</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../GettingStarted/">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Catalog Management</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/CKAN/">CKAN</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/GeoJSON/">GeoJSON</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Web-Map-Service/">Web Map Service (WMS)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Performance-testing/">Performance Testing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Handling-CORS/">Issues with CORS</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Initialization-File/">Initialization File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../CatalogManagement/Format-Conversion-Service/">Format Conversion Service</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Config-JSON/">Config JSON</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-to-skin-a-Terria-Map/">Skinning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../TerriaJS-URL-parameters/">URL Parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../TerriaJS-in-iframe/">Controlling in an iframe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Extending-TerriaJS/">Extending TerriaJS</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">CKAN Previewer</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#ckan-previewer">CKAN previewer</a></li>
+                
+                    <li><a class="toctree-l4" href="#to-create-a-ckan-installation-with-docker">To create a CKAN installation with docker</a></li>
+                
+                    <li><a class="toctree-l4" href="#to-create-a-ckan-installation-from-source">To create a CKAN installation from source</a></li>
+                
+                    <li><a class="toctree-l4" href="#to-add-cesium-previewer">To add Cesium Previewer</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WPS-parameters-guide/">WPS Parameters</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Deployment</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Deploying-Terria-Map/">Deploying TerriaMap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Deploying-and-building-TerriaJS/">Deploying and Building</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Overall-system-architecture/">Overall System Architecture</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Problems-and-Solutions/">Problems and Solutions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Setting-up-a-region-mapping-server/">Setting up a Region Mapping Server</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/Using-a-vector-tile-source-for-region-mapping/">Using a Vector Tile Source</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Deployment/WMS-Services/">WMS Services</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Contributors</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Development-environment/">Development Environment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Contributing-to-TerriaJS/">Working with TerriaJS and Cesium</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Setting-up-Saucelabs-Locally/">Setting up Saucelabs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Contributors/Using-Docker/">Using Docker</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">TerriaJS</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Customizing &raquo;</li>
+        
+      
+    
+    <li>CKAN Previewer</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="ckan-previewer">CKAN previewer</h2>
+<p>The CKAN previewer is a plugin for CKAN which uses TerriaJS to preview geospatial content using an iframe. It is provided in the <a href="https://github.com/TerriaJS/TerriaMap/tree/master/ckanext-cesiumpreview">/ckanext-cesiumpreview folder of TerriaMap</a>.</p>
+<h3 id="to-create-a-ckan-installation-with-docker">To create a CKAN installation with docker</h3>
+<p>Follow the instructions in the CKAN documentation <a href="http://docs.ckan.org/en/latest/maintaining/installing/install-using-docker.html">here</a></p>
+<h3 id="to-create-a-ckan-installation-from-source">To create a CKAN installation from source</h3>
+<p>Install a local instance of CKAN per http://docs.ckan.org/en/ckan-2.0/install-from-source.html
+Follow all the steps :
+<em> In step 1 install openjdk-7-jdk instead of openjdk-6-jdk
+</em> in step 2c use requirements.txt instead of pip-requirements.txt
+<em> In step 3 making 'pass' your password will makes things simpler
+</em> Set up the optional Solr install as per step 5 (Single Solr instance)
+<em> Step 6 can take a long time.  If it does fail drop the ckan_default database and redo step 3 and try again
+</em> You do no need to set up the optional DataStore install as per step 7 </p>
+<p>To add local storage of files</p>
+<pre><code>sudo mkdir -p /var/lib/ckan/default
+sudo chmod 777 /var/lib/ckan/default
+</code></pre>
+<p>in development.ini under storage settings add</p>
+<pre><code>nano /etc/ckan/default/development.ini
+ckan.storage_path = /var/lib/ckan/default
+</code></pre>
+<p>And to run the server</p>
+<pre><code>. /usr/lib/ckan/default/bin/activate
+cd /usr/lib/ckan/default/src/ckan
+paster serve /etc/ckan/default/development.ini
+</code></pre>
+<p>To install spatial extension for spatial queries and previewers, see http://docs.ckan.org/projects/ckanext-spatial/en/latest/install.html</p>
+<h4 id="to-make-sysadmin-account">To make sysadmin account</h4>
+<pre><code>paster sysadmin add admin -c /etc/ckan/default/development.ini
+</code></pre>
+<h3 id="to-add-cesium-previewer">To add Cesium Previewer</h3>
+<p>TODO: Update this to use our ckan previewer plugin.  Will require a standalone github be created for the plugin</p>
+<p><code>pip install -e git+https://github.com/NICTA/nationalmap-preview#egg=cesiumpreviewer</code></p>
+<p>Make a virtual link to the viewer in CKAN to the cesiumviewer.</p>
+<pre><code>ln -s ~/nationalmap/ckanext-cesiumpreview/ckanext/cesiumpreview ~/ckan/lib/default/src/ckan/ckanext/cesiumpreview
+</code></pre>
+<p>In the CKAN development.ini under storage settings add the plugin</p>
+<pre><code>nano /etc/ckan/default/development.ini
+ckan.plugins = cesium_viewer ...
+</code></pre>
+<p>There may be a more automatic way to do this, but I'm just patching files in CKAN to handle the cesium previewer in the same way as the recline previewer.  So first open setup.py for editing.  </p>
+<pre><code>nano ~/ckan/lib/default/src/ckan/setup.py
+</code></pre>
+<p>And add the following line under the recline_preview plugin entry (line ~76)</p>
+<pre><code> 'cesium_preview = ckanext.reclinepreview.plugin:CesiumPreview',
+</code></pre>
+<p>Then patch entry_points.txt</p>
+<pre><code>  nano ~/ckan/lib/default/src/ckan/ckan.egg-info/entry_points.txt
+</code></pre>
+<p>And add the following line under the recline_preview plugin entry (line ~76)</p>
+<pre><code>  cesium_preview = ckanext.cesiumpreview.plugin:CesiumPreview
+</code></pre>
+<p>That should be it.  The cesium previewer is pointing to the instance at nationalmap.research.nicta.com.au.  If you need to update the cesium_previewer path to a different location then edit the vis_server variable in preview_cesium.js</p>
+<pre><code>  nano ~/nationalmap/cesiumpreview/theme/public/preview_cesium.js
+</code></pre>
+<p>If all went correctly you should be able to start the CKAN server in virtualenv and access the server at http://127.0.0.1:5000/</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../WPS-parameters-guide/" class="btn btn-neutral float-right" title="WPS Parameters">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Extending-TerriaJS/" class="btn btn-neutral" title="Extending TerriaJS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Extending-TerriaJS/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../WPS-parameters-guide/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>
